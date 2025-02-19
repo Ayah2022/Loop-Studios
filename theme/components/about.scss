@@ -1,0 +1,64 @@
+.about-section {
+    position: relative;
+    margin: 100px 0;
+
+    .image-wrapper {
+        width: 63%;
+        position: relative;
+
+        .img-tag {
+            width: 100%;
+        }
+    }
+
+    .content-wrapper {
+        width: 45%;
+        position: absolute;
+        top: 35%;
+        left: 51%;
+        background-color: #fff;
+        padding: 80px;
+        padding-right: 10px;
+
+        .title {
+            font-size: 48px;
+            color: $black;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .paragraph {
+            color: $dark-grey;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .about-section {
+        margin: 80px 0;
+        margin-bottom: 50px;
+        padding-inline: 10px;
+
+        .image-wrapper {
+            width: 100%;
+
+            .img-tag {
+                width: 100%;
+            }
+        }
+
+        .content-wrapper {
+            width: 100%;
+            position: initial;
+            padding: 20px;
+            padding-right: 0;
+            text-align: center;
+
+            .title {
+                font-size: 28px;
+            }
+
+
+        }
+    }
+}

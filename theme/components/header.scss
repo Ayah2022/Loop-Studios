@@ -1,0 +1,160 @@
+.header-wrapper {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // padding: 60px 0;
+    padding: 50px 0;
+    margin-left: 0 !important;
+
+    .navbar {
+        background-color: transparent !important;
+
+        .navbar-toggler {
+            border: none;
+
+            .navbar-toggler-icon {
+                background-image: url("../../src/assets/images/icon-hamburger.svg");
+            }
+        }
+
+        .navbar-collapse {
+            flex-grow: 0 !important;
+
+            .menu-header {
+                display: none;
+            }
+
+            .navbar-nav {
+
+                .nav-item {
+                    list-style: none;
+                    text-decoration: none;
+                    margin-inline-end: 12px;
+
+                    .nav-link {
+                        text-decoration: none;
+                        padding: 10px;
+                        color: $white;
+                        font-size: 15px;
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            background-color: $white;
+                            height: 2px;
+                            width: 0;
+                            left: 35%;
+                            bottom: 0;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        &:hover {
+                            &:after {
+                                width: 30%;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .logo-wrapper {
+        img {
+            width: 194px;
+            height: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: $md) {
+    .header-wrapper {
+        padding: 20px 0;
+        margin-left: 0 !important;
+
+        .navbar {
+            // background-color: transparent !important;
+
+            .navbar-collapse {
+
+                // flex-grow: 0 !important;
+                &.fullscreen-nav {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgba(0, 0, 0, 0.9);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    z-index: 9;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+                    &.show {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .menu-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding: 35px 25px;
+
+                        .close-icon {
+                            .icon-tag {
+                                width: 19px;
+                            }
+                        }
+
+                        .menu-logo {
+                            margin-inline-end: 5px;
+
+                            .img-tag {
+                                width: 120px;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                }
+
+                .navbar-nav {
+                    padding: 20px;
+
+                    .nav-item {
+                        margin-inline-end: 6px;
+
+                        .nav-link {
+                            padding: 5px;
+                            font-size: 22px;
+                            font-weight: 300;
+                            font-family: 'JosefinSans';
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .logo-wrapper {
+            img {
+                width: 120px;
+                height: auto;
+            }
+        }
+    }
+}

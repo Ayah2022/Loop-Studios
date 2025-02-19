@@ -1,0 +1,15 @@
+<section class="creations-section">
+    <div class="title-wrapper">
+        <h2 class="creations-title">OUR CREATIONS</h2>
+        <button class="creations-btn">SEE ALL</button>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" *ngFor="let item of creations">
+            <img [src]="item.imgSrc" [alt]="item.title" />
+            <div class="overlay">
+                <h3>{{ item.title }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="btn-wrapper"><button class="creations-mobile-btn">SEE ALL</button></div>
+</section>
